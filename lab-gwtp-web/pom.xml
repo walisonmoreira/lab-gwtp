@@ -1,0 +1,46 @@
+<project
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>lab-gwtp-parent</artifactId><groupId>lab-gwtp</groupId><version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>lab-gwtp-web</artifactId>
+  <packaging>war</packaging>
+  <name>Lab GWTP Web</name>
+
+  <properties>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
+
+  <dependencies>
+    <dependency><artifactId>javax.servlet-api</artifactId><groupId>javax.servlet</groupId><scope>provided</scope></dependency>
+    <dependency><artifactId>logback-classic</artifactId><groupId>ch.qos.logback</groupId></dependency>
+    <dependency><artifactId>jcl-over-slf4j</artifactId><groupId>org.slf4j</groupId></dependency>
+    <dependency><artifactId>lab-gwtp-service</artifactId><groupId>lab-gwtp</groupId></dependency>
+  </dependencies>
+
+  <build>
+    <finalName>labgwtp</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${basedir}</directory>
+              <includes>
+                <include>src/main/gwt-unitCache/**</include>
+                <include>src/main/webapp/WEB-INF/deploy/**</include>
+              </includes>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
