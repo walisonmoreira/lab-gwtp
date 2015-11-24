@@ -16,6 +16,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <spring.version>4.2.3.RELEASE</spring.version>
     <gwt.version>2.7.0</gwt.version>
+    <gwtp.version>1.5.1</gwtp.version>
   </properties>
 
   <modules>
@@ -42,6 +43,8 @@
       <!-- GWT -->
       <dependency><artifactId>gwt-dev</artifactId><groupId>com.google.gwt</groupId><version>${gwt.version}</version><scope>provided</scope></dependency>
       <dependency><artifactId>gwt-user</artifactId><groupId>com.google.gwt</groupId><version>${gwt.version}</version></dependency>
+      <!-- GWTP -->
+      <dependency><artifactId>gwtp-mvp-client</artifactId><groupId>com.gwtplatform</groupId><version>${gwtp.version}</version></dependency>
       <!-- Outras APIs -->
       <dependency><artifactId>jackson-databind</artifactId><groupId>com.fasterxml.jackson.core</groupId><version>2.6.3</version></dependency>
       <!-- Modules -->

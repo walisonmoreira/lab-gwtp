@@ -15,7 +15,6 @@
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <gwtp.version>1.5.1</gwtp.version>
     <gwt.logLevel>INFO</gwt.logLevel>
     <gwt.compiler.force>true</gwt.compiler.force>
     <gwt.compiler.strict>true</gwt.compiler.strict>
@@ -35,7 +34,7 @@
     <dependency><artifactId>gwt-user</artifactId><groupId>com.google.gwt</groupId></dependency>
     <dependency><artifactId>gwt-dev</artifactId><groupId>com.google.gwt</groupId></dependency>
     <!-- GWTP -->
-    <dependency><artifactId>gwtp-mvp-client</artifactId><groupId>com.gwtplatform</groupId><version>${gwtp.version}</version></dependency>
+    <dependency><artifactId>gwtp-mvp-client</artifactId><groupId>com.gwtplatform</groupId></dependency>
     <!-- Dependências do próprio projeto. -->
     <dependency><artifactId>lab-gwtp-shared</artifactId><groupId>lab-gwtp</groupId></dependency>
     <dependency><artifactId>lab-gwtp-shared</artifactId><groupId>lab-gwtp</groupId><classifier>sources</classifier></dependency>
