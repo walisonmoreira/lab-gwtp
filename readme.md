@@ -14,3 +14,4 @@ Laboratório de testes do GWTP.
 * [ArcBees GWTP Basic Archetype](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic)
 * [Create an App from the Archetype](http://dev.arcbees.com/gwtp/get-started/)
 * [Communicate with your server using REST/Json](https://github.com/nmorel/gwt-jackson)
+* [GWTP Integration with Spring security](https://github.com/imrabti/gwtp-spring-security)
