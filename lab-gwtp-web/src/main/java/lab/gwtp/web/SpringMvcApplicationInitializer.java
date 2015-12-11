@@ -2,21 +2,21 @@ package lab.gwtp.web;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import lab.gwtp.domain.config.DomainConfig;
-import lab.gwtp.rest.config.RestConfig;
+import lab.gwtp.config.RootConfig;
+import lab.gwtp.config.rest.RestConfig;
+import lab.gwtp.shared.ResourcePaths;
 
 public class SpringMvcApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-  protected Class<?>[] getRootConfigClasses() {
-    return new Class<?>[] { DomainConfig.class };
-  }
+	protected Class<?>[] getRootConfigClasses() {
+		return new Class<?>[] { RootConfig.class };
+	}
 
-  protected Class<?>[] getServletConfigClasses() {
-    return new Class<?>[] { RestConfig.class };
-  }
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class<?>[] { RestConfig.class };
+	}
 
-  protected String[] getServletMappings() {
-    return new String[] { RestConfig.URI_PATTERN };
-  }
-
+	protected String[] getServletMappings() {
+		return new String[] { ResourcePaths.ROOT + "/*" };
+	}
 }

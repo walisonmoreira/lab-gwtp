@@ -1,66 +1,97 @@
-<project
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <artifactId>lab-gwtp-parent</artifactId><groupId>lab-gwtp</groupId><version>0.0.1-SNAPSHOT</version>
-  </parent>
+	<parent>
+		<artifactId>lab-gwtp-parent</artifactId>
+		<groupId>lab-gwtp</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
 
-  <artifactId>lab-gwtp-ui</artifactId>
-  <name>Lab GWTP UI</name>
+	<artifactId>lab-gwtp-ui</artifactId>
+	<name>Lab GWTP UI</name>
 
-  <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <gwt.logLevel>INFO</gwt.logLevel>
-    <gwt.compiler.force>true</gwt.compiler.force>
-    <gwt.compiler.strict>true</gwt.compiler.strict>
-    <gwt.compiler.enforceStrictResources>true</gwt.compiler.enforceStrictResources>
-    <gwt.module>lab.gwtp.Ui</gwt.module>
-    <gwt.module.short>ui</gwt.module.short>
-    <gwt.style>obfuscated</gwt.style>
-    <gwt.draftCompile>false</gwt.draftCompile>
-    <gwt.compiler.enableClosureCompiler>true</gwt.compiler.enableClosureCompiler>
-    <gwt.disableClassMetadata>true</gwt.disableClassMetadata>
-    <gwt.disableCastChecking>true</gwt.disableCastChecking>
-    <gwt.war>${basedir}/../lab-gwtp-web/src/main/webapp</gwt.war>
-  </properties>
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<gwt.logLevel>INFO</gwt.logLevel>
+		<gwt.compiler.force>true</gwt.compiler.force>
+		<gwt.compiler.strict>true</gwt.compiler.strict>
+		<gwt.compiler.enforceStrictResources>true</gwt.compiler.enforceStrictResources>
+		<gwt.module>lab.gwtp.Ui</gwt.module>
+		<gwt.module.short>ui</gwt.module.short>
+		<gwt.style>obfuscated</gwt.style>
+		<gwt.draftCompile>false</gwt.draftCompile>
+		<gwt.compiler.enableClosureCompiler>true</gwt.compiler.enableClosureCompiler>
+		<gwt.disableClassMetadata>true</gwt.disableClassMetadata>
+		<gwt.disableCastChecking>true</gwt.disableCastChecking>
+		<gwt.war>${basedir}/../lab-gwtp-web/src/main/webapp</gwt.war>
+	</properties>
 
-  <dependencies>
-    <!-- GWT -->
-    <dependency><artifactId>gwt-user</artifactId><groupId>com.google.gwt</groupId></dependency>
-    <dependency><artifactId>gwt-dev</artifactId><groupId>com.google.gwt</groupId></dependency>
-    <!-- GWTP -->
-    <dependency><artifactId>gwtp-mvp-client</artifactId><groupId>com.gwtplatform</groupId></dependency>
-    <!-- Dependências do próprio projeto. -->
-    <dependency><artifactId>lab-gwtp-shared</artifactId><groupId>lab-gwtp</groupId></dependency>
-    <dependency><artifactId>lab-gwtp-shared</artifactId><groupId>lab-gwtp</groupId><classifier>sources</classifier></dependency>
-  </dependencies>
+	<dependencies>
+		<!-- GWT -->
+		<dependency>
+			<artifactId>gwt-user</artifactId>
+			<groupId>com.google.gwt</groupId>
+		</dependency>
+		<dependency>
+			<artifactId>gwt-dev</artifactId>
+			<groupId>com.google.gwt</groupId>
+		</dependency>
+		<!-- GWTP -->
+		<dependency>
+			<artifactId>gwtp-mvp-client</artifactId>
+			<groupId>com.gwtplatform</groupId>
+		</dependency>
+		<dependency>
+			<groupId>com.gwtplatform</groupId>
+			<artifactId>gwtp-dispatch-rest</artifactId>
+		</dependency>
+		<!-- Dependências do próprio projeto. -->
+		<dependency>
+			<artifactId>lab-gwtp-shared</artifactId>
+			<groupId>lab-gwtp</groupId>
+		</dependency>
+		<dependency>
+			<artifactId>lab-gwtp-shared</artifactId>
+			<groupId>lab-gwtp</groupId>
+			<classifier>sources</classifier>
+		</dependency>
+	</dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-clean-plugin</artifactId>
-        <configuration>
-          <filesets>
-            <fileset>
-              <directory>${gwt.war}</directory>
-              <includes>
-                <include>${gwt.module.short}/**</include>
-              </includes>
-            </fileset>
-          </filesets>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>gwt-maven-plugin</artifactId><groupId>org.codehaus.mojo</groupId>
-        <configuration><sourceLevel>auto</sourceLevel></configuration>
-        <executions><execution><goals><goal>compile</goal></goals><phase>prepare-package</phase></execution></executions>
-      </plugin>
-    </plugins>
-  </build>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${gwt.war}</directory>
+							<includes>
+								<include>${gwt.module.short}/**</include>
+							</includes>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<groupId>org.codehaus.mojo</groupId>
+				<configuration>
+					<sourceLevel>auto</sourceLevel>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<phase>prepare-package</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

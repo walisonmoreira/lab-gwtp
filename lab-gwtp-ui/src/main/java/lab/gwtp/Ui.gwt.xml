@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD GWT 2.7.0//EN" "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to="ui">
-  <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
-  <extend-configuration-property name="gin.ginjector.modules" value="lab.gwtp.ui.ClientModule" />
-  <inherits name="lab.gwtp.Shared" />
-  <source path="ui" />
+
+	<inherits name="com.gwtplatform.dispatch.rest.DispatchRest" />
+	<inherits name="com.gwtplatform.mvp.MvpWithEntryPoint" />
+	<extend-configuration-property name="gin.ginjector.modules" value="lab.gwtp.ui.ClientModule" />
+	<inherits name="lab.gwtp.Shared" />
+	<source path="ui" />
+	
+	<set-configuration-property name="gwtp.bootstrapper" value="lab.gwtp.ui.application.ApplicationBootstraper"/>
+	
 </module>

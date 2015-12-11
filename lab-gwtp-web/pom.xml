@@ -18,7 +18,6 @@
   </properties>
 
   <dependencies>
-    <dependency><artifactId>javax.servlet-api</artifactId><groupId>javax.servlet</groupId><scope>provided</scope></dependency>
     <dependency><artifactId>logback-classic</artifactId><groupId>ch.qos.logback</groupId></dependency>
     <dependency><artifactId>jcl-over-slf4j</artifactId><groupId>org.slf4j</groupId></dependency>
     <dependency><artifactId>lab-gwtp-service</artifactId><groupId>lab-gwtp</groupId></dependency>

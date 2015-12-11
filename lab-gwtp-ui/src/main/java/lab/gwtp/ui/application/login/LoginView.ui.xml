@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.login {
+		
+	}
+	
+	.login h3 {
+		padding-left: 5px;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	
+	.login button {
+		width: 100px;
+		margin: 5px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel styleName="{style.login}">
+		<h3>Login Page</h3>
+		<g:VerticalPanel horizontalAlignment="ALIGN_RIGHT">
+			<g:HorizontalPanel spacing="5">
+				<g:Label text="Usuário" />
+				<g:TextBox ui:field="username" />
+			</g:HorizontalPanel>
+			<g:HorizontalPanel spacing="5">
+				<g:Label text="Senha" />
+				<g:PasswordTextBox ui:field="password" />
+			</g:HorizontalPanel>
+			<g:Button text="Login" ui:field="login" />
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
