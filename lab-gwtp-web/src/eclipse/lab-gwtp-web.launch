@@ -19,9 +19,9 @@
 <stringAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.config.path.0" value=""/>
 <stringAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.config.type.0" value="DEFAULT"/>
 <booleanAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.embedded" value="false"/>
-<intAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.microVersion" value="1"/>
+<intAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.microVersion" value="6"/>
 <intAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.minorVersion" value="3"/>
-<stringAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.path" value="${eclipse_home}/../jetty-distribution-9.3.1.v20150714"/>
+<stringAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.path" value="${jetty-9.3.6}"/>
 <stringAttribute key="net.sourceforge.eclipsejetty.launcher.jetty.version" value="JETTY_9_3"/>
 <stringAttribute key="net.sourceforge.eclipsejetty.launcher.jmx.enabled" value="false"/>
 <stringAttribute key="net.sourceforge.eclipsejetty.launcher.jndi.enabled" value="false"/>
