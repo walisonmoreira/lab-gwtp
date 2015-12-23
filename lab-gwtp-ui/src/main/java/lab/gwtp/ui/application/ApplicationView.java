@@ -10,6 +10,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     main = new SimplePanel();
 
     initWidget(main);
+
     bindSlot(ApplicationPresenter.SLOT_MAIN, main);
   }
 }
